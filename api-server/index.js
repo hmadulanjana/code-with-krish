@@ -47,9 +47,6 @@ app.get('/number/min', (req, res) => {
     const result = getMinNumber(num1, num2);
 
     res.status(result.status).json(result.data);
-
-
-
 })
 
 app.listen(port, () => {
