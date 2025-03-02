@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "121041d4-bc31-4af0-974b-2186e8901408",
+		"name": "Customers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24852813"
+	},
+	"item": [
+		{
+			"name": "get all customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "get customer by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/customers/7"
+			},
+			"response": []
+		},
+		{
+			"name": "Save order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n       \r\n        \"name\": \"Akila\",\r\n        \"email\": \"akila@7gmail.com\",\r\n        \"address\": \"Colombo 09\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/customers"
+			},
+			"response": []
+		}
+	]
+}

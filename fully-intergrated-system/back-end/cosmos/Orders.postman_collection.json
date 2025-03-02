@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "0f8f15d7-bd95-4e5d-88cd-40d0b3c4283b",
+		"name": "Orders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24852813"
+	},
+	"item": [
+		{
+			"name": "get all orders",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get order by id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Save order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"customerId\":1,\r\n\r\n    \"items\":[\r\n\r\n        {\r\n\r\n            \"productId\":1,\r\n\r\n            \"price\":100,\r\n\r\n            \"quantity\":5\r\n\r\n        },\r\n\r\n         {\r\n\r\n            \"productId\":12,\r\n\r\n            \"price\":200,\r\n\r\n            \"quantity\":3\r\n\r\n        }\r\n\r\n    ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/orders"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\":\"CANCELLED\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/orders/7"
+			},
+			"response": []
+		}
+	]
+}
