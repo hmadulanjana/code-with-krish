@@ -196,6 +196,7 @@ export class OrdersService implements OnModuleInit {
               value: JSON.stringify({
                 customerId: customerId,
                 city: city,
+                orderId: savedOrder.id,
                 status: 'Order successfully created',
               }),
             },

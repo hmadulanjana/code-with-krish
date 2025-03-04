@@ -46,12 +46,18 @@ export class DispatcherService implements OnModuleInit {
         console.log(
           '---------------------------------New order confirmed arrived dispatcher------------------------------',
         );
-        const { city } = JSON.parse(message.value?.toString() || '{}');
+        const { city, orderId } = JSON.parse(message.value?.toString() || '{}');
         console.log(city);
         const dispatcher = await this.dispatcherRepository.find({
           where: { city },
         });
+
         console.log(dispatcher);
+        
+        if (!dispatcher) {
+            console.log(dispatcher);
+          throw new NotFoundException(`Cannot find vehicle for order ${orderId}`);
+        }
       },
     });
   }
